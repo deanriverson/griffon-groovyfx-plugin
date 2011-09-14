@@ -1,4 +1,4 @@
-<plugin name='groovyfx' version='0.1' griffonVersion='0.9.3 &gt; *' jdk='1.5'>
+<plugin name='groovyfx' version='0.2' griffonVersion='0.9.3 &gt; *' jdk='1.5'>
   <author>Dean Iverson</author>
   <authorEmail>deanriverson@gmail.com</authorEmail>
   <title>Griffon GroovyFX Plugin</title>

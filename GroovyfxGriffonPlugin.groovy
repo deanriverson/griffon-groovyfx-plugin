@@ -18,7 +18,7 @@
  * @author Dean Iverson
  */
 class GroovyfxGriffonPlugin {
-    def version = "0.1"
+    def version = "0.2"
     def griffonVersion = '0.9.3 > *' 
     def dependsOn = [:]
     def pluginIncludes = []

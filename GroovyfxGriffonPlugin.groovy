@@ -18,8 +18,8 @@
  * @author Dean Iverson
  */
 class GroovyfxGriffonPlugin {
-    def version = "0.2"
-    def griffonVersion = '0.9.3 > *' 
+    def version = "0.2.1"
+    def griffonVersion = '0.9.4 > *' 
     def dependsOn = [:]
     def pluginIncludes = []
     def license = 'Apache Software License 2.0'

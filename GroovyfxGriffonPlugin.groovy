@@ -1,5 +1,5 @@
 /*
- * Copyright 2010 the original author or authors.
+ * Copyright 2010-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,21 @@
  * @author Dean Iverson
  */
 class GroovyfxGriffonPlugin {
-    def version = "0.2.1"
-    def griffonVersion = '0.9.4 > *' 
+    String version = '0.3'
+    String griffonVersion = '0.9.5-SNAPSHOT > *' 
     def dependsOn = [:]
-    def pluginIncludes = []
-    def license = 'Apache Software License 2.0'
-    def toolkits = ['javafx']
-    def platforms = []
-
-    def author = 'Dean Iverson'
-    def authorEmail = 'deanriverson@gmail.com'
-    def title = 'Griffon GroovyFX Plugin'
-    def description = '''
+    List pluginIncludes = []
+    String license = 'Apache Software License 2.0'
+    List toolkits = ['swing', 'javafx']
+    List platforms = []
+    List authors = [
+        [
+            name: 'Dean Iverson',
+            email: 'deanriverson@gmail.com'
+        ]
+    ]
+    String title = 'Griffon JavaFX Plugin'
+    String description = '''
 A plugin that provides use of the GroovyFX library from within a Griffon application.
 '''
 

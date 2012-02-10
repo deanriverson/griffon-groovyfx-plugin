@@ -20,11 +20,13 @@
 class GroovyfxGriffonPlugin {
     String version = '0.3'
     String griffonVersion = '0.9.5-SNAPSHOT > *' 
-    def dependsOn = [:]
+    Map dependsOn = [:]
     List pluginIncludes = []
     String license = 'Apache Software License 2.0'
     List toolkits = ['swing', 'javafx']
     List platforms = []
+    String source = 'https://github.com/deanriverson/griffon-groovyfx-plugin'
+    String documentation = ''
     List authors = [
         [
             name: 'Dean Iverson',
@@ -35,7 +37,4 @@ class GroovyfxGriffonPlugin {
     String description = '''
 A plugin that provides use of the GroovyFX library from within a Griffon application.
 '''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Groovyfx+Plugin'
 }

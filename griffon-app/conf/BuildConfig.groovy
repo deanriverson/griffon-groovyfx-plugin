@@ -5,12 +5,13 @@ griffon.project.dependency.resolution = {
         griffonPlugins()
         griffonHome()
         griffonCentral()
+        mavenRepo "https://oss.sonatype.org/content/groups/public"
         // pluginDirPath is only available when installed
-        String basePath = pluginDirPath? "${pluginDirPath}/" : ''
-        flatDir name: 'groovyfxPluginLib', dirs: ["${basePath}lib"]
+//        String basePath = pluginDirPath? "${pluginDirPath}/" : ''
+//        flatDir name: 'groovyfxPluginLib', dirs: ["${basePath}lib"]
     }
     dependencies {
-        compile 'groovyx.javafx:groovyfx:0.1-SNAPSHOT'
+        compile 'org.codehaus.groovyfx:groovyfx:0.2-SNAPSHOT'
     }
 }
 

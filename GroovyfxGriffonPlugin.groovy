@@ -50,6 +50,10 @@ class GroovyfxGriffonPlugin {
 Provides integration with [GroovyFX][1].  GroovyFX allows you to use the [JavaFX][2] API to write your Griffon
 views.
 
+*Note:* If you want to create a Griffon JavaFX application, install the JavaFX plugin instead.  The JavaFX plugin
+will automatically pull this plugin in as a dependency.  This plugin should only be installed independently if
+you want to add JavaFX views to your existing Swing application.
+
 Usage
 -----
 

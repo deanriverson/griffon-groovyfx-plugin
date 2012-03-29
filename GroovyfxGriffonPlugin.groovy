@@ -20,7 +20,7 @@
 class GroovyfxGriffonPlugin {
     String version = '0.3'
     String griffonVersion = '0.9.5 > *'
-    def dependsOn = [:]
+    Map dependsOn = [:]
     List pluginIncludes = []
     String license = 'Apache Software License 2.0'
     // Toolkit compatibility. No value means compatible with all

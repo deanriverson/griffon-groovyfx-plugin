@@ -65,7 +65,8 @@ found [here][4].
 
 ### Example
 
-A simple GroovyFX/JavaFX view might look like this.
+A simple GroovyFX/JavaFX view might look like this:
+
     hbox(padding: 80) {
         text(text: "Java", font: "80pt sanserif") {
             fill linearGradient(endX: 0, stops: [[0, orange], [1, chocolate]])

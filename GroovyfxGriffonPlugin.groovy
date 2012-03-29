@@ -19,7 +19,7 @@
  */
 class GroovyfxGriffonPlugin {
     String version = '0.3'
-    String griffonVersion = '0.9.5-SNAPSHOT > *' 
+    String griffonVersion = '0.9.5 > *'
     Map dependsOn = [:]
     List pluginIncludes = []
     String license = 'Apache Software License 2.0'
@@ -33,7 +33,7 @@ class GroovyfxGriffonPlugin {
             email: 'deanriverson@gmail.com'
         ]
     ]
-    String title = 'Griffon JavaFX Plugin'
+    String title = 'Enables GroovyFX on Views'
     String description = '''
 A plugin that provides use of the GroovyFX library from within a Griffon application.
 '''

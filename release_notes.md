@@ -1,3 +1,11 @@
+What's New in Version 0.6
+=========================
+Updated dependencies to the official release version of GroovyFX 0.2.
+
+What's New in Version 0.5
+=========================
+Added support for using JavaFX embedded in a JDK.
+
 What's New in Version 0.4
 =========================
 The GroovyFX plugin now resolves the jfxrt.jar file so that it can be used without the JavaFX plugin.

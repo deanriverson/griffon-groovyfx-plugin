@@ -19,12 +19,27 @@
  * @author Andres Almiray
  */
 
+File jfxrtFile = null
+
 //eventClasspathEnd = {
 eventCompileSourcesStart = {
-    File jfxrtFile = new File(ant.project.properties['environment.JAVAFX_HOME'], 'rt/lib/jfxrt.jar')
+    // Check for a JavaFX SDK via a JAVAFX_HOME environment variable
+    String javafxHome = ant.project.properties['environment.JAVAFX_HOME'] ?: ''
+    jfxrtFile = new File(javafxHome, 'rt/lib/jfxrt.jar')
+
     if(!jfxrtFile.exists()) {
-        event 'StatusError', ['The file jfxrt.jar could not be found. Is JAVAFX_HOME set in the environment variables?']
-        exit 1
+        // Next check if JavaFX is present with the JDK pointed at by JAVA_HOME
+        String javaHome = ant.project.properties['environment.JAVA_HOME']
+        jfxrtFile = new File(javaHome, 'jre/lib/jfxrt.jar')
+
+        if (!jfxrtFile.exists()) {
+            event 'StatusError', ['The file jfxrt.jar could not be found. Is JAVAFX_HOME set in the environment variables?']
+            exit 1
+        }
+
+        debug "JavaFX runtime found with JDK at ${jfxrtFile.absolutePath}"
+    } else {
+        debug "JavaFX runtime found in SDK at ${jfxrtFile.absolutePath}"
     }
 
     final jfxrtJarPath = ant.path {
@@ -50,9 +65,8 @@ eventRunAppTweak = { message ->
         if (originalSetupRuntimeJars)
             runtimeJars = originalSetupRuntimeJars()
 
-        def javafxrt = new File("${System.getenv('JAVAFX_HOME')}/rt/lib/jfxrt.jar")
-        if (javafxrt)
-            runtimeJars << javafxrt
+        if (jfxrtFile)
+            runtimeJars << jfxrtFile
 
         return runtimeJars
     }

@@ -18,7 +18,7 @@
  * @author Dean Iverson
  */
 class GroovyfxGriffonPlugin {
-    String version = '0.4'
+    String version = '0.6'
     String griffonVersion = '0.9.5 > *'
     Map dependsOn = [:]
     List pluginIncludes = []
@@ -57,8 +57,13 @@ you want to add JavaFX views to your existing Swing application.
 Usage
 -----
 
-This version of the plugin uses GroovyFX 0.2, which provides compatibility with JavaFX 2.1 (Developer's Preview).
-JavaFX 2.1 can be downloaded from [javafx.com][3].
+This version of the plugin uses GroovyFX 0.2, which works with JavaFX 2.1.  The JavaFX 2.1 SDK can be downloaded
+from [javafx.com][3].  Once the SDK is installed, the JAVAFX_HOME environment variable should be set to point to
+the root directory of the JavaFX SDK installation
+
+The JavaFX 2.1 SDK is also bundled with the Java 7u4 (or later) JDK.  In this case, you can just set your
+JAVA_HOME environment variable to point to the JDK installation and the plugin will use the bundled JavaFX
+SDK.
 
 Once installed, you can use any of the nodes provided by GroovyFX in your views.  GroovyFX documentation can be
 found [here][4].

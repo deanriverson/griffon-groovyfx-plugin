@@ -18,8 +18,8 @@
  * @author Dean Iverson
  */
 class GroovyfxGriffonPlugin {
-    String version = '0.7-SNAPSHOT'
-    String griffonVersion = '1.0.0 > *'
+    String version = '0.7'
+    String griffonVersion = '1.0.2 > *'
     Map dependsOn = [:]
     List pluginIncludes = []
     String license = 'Apache Software License 2.0'

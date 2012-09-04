@@ -13,7 +13,7 @@ griffon.project.dependency.resolution = {
 //        flatDir name: 'groovyfxPluginLib', dirs: ["${basePath}lib"]
     }
     dependencies {
-        compile 'org.codehaus.groovyfx:groovyfx:0.3-SNAPSHOT'
+        compile 'org.codehaus.groovyfx:groovyfx:0.3'
     }
 }
 

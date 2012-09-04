@@ -1,3 +1,7 @@
+What's New in Version 0.7
+=========================
+Updated dependencies to the official release version of GroovyFX 0.3, which requires JavaFX 2.2.
+
 What's New in Version 0.6
 =========================
 Updated dependencies to the official release version of GroovyFX 0.2.

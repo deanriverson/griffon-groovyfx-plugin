@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2012 the original author or authors.
+ * Copyright 2009-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
 File jfxrtFile = null
 
 //eventClasspathEnd = {
-eventCompileSourcesStart = {
+eventClasspathEnd = {
     // Check for a JavaFX SDK via a JAVAFX_HOME environment variable
     String javafxHome = ant.project.properties['environment.JAVAFX_HOME'] ?: ''
     jfxrtFile = new File(javafxHome, 'rt/lib/jfxrt.jar')
@@ -37,6 +37,7 @@ eventCompileSourcesStart = {
             // Next check if JavaFX is present with the JDK pointed at by JAVA_HOME
             String javaHome = ant.project.properties['environment.JAVA_HOME']
             jfxrtFile = new File(javaHome, 'jre/lib/jfxrt.jar')
+            if (!jfxrtFile.exists()) jfxrtFile = new File(javaHome, 'jre/lib/ext/jfxrt.jar')
 
             if (!jfxrtFile.exists()) {
                 event 'StatusError', ['The file jfxrt.jar could not be found. Is JAVAFX_HOME set in the environment variables?']

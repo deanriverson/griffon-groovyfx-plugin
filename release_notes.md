@@ -1,3 +1,11 @@
+What's New in Version 0.9.0
+===========================
+Include jfxrt.jar in the classpath using a much earlier build event
+
+What's New in Version 0.8
+=========================
+Updated dependencies to the official release version of GroovyFX 0.3.1.
+
 What's New in Version 0.7
 =========================
 Updated dependencies to the official release version of GroovyFX 0.3, which requires JavaFX 2.2.

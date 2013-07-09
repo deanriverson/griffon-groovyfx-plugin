@@ -21,7 +21,6 @@
 
 File jfxrtFile = null
 
-//eventClasspathEnd = {
 eventClasspathEnd = {
     // Check for a JavaFX SDK via a JAVAFX_HOME environment variable
     String javafxHome = ant.project.properties['environment.JAVAFX_HOME'] ?: ''
@@ -46,7 +45,7 @@ eventClasspathEnd = {
                 }
 
                 debug "JavaFX runtime found using JAVA_HOME at ${jfxrtFile.absolutePath}"
-            else {
+            } else {
                 event 'StatusError', ['The file jfxrt.jar could not be found as JAVA_HOME is not set.']
                 exit 1
             }

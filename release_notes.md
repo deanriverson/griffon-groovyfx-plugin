@@ -1,3 +1,7 @@
+What's New in Version 0.9.1
+===========================
+Fixed a problem during buildtime if $JAVA_HOME was not defined_
+
 What's New in Version 0.9.0
 ===========================
 Include jfxrt.jar in the classpath using a much earlier build event
